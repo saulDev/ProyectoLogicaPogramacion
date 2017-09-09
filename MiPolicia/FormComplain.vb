@@ -3,10 +3,51 @@
 Public Class FormComplain
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If TextBox1.Text() <> "" And TextBox2.Text() <> "" And TextBox3.Text() <> "" And TextBox4.Text() <> "" And TextBox5.Text() <> "" And TextBox6.Text() <> "" Then
+            Me.InsertComplain()
+        Else
+            MsgBox("Por favor llena todos los campos")
+        End If
+
+    End Sub
+
+    Private Sub GetLastID()
+        Dim conn As New SqlConnection
+        If conn.State = ConnectionState.Closed Then
+            conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
+        End If
+
+        Try
+            conn.Open()
+            Dim sqlquery As String = "SELECT MAX(id_den) AS LastId FROM denuncia"
+            Dim data As SqlDataReader
+            Dim adapter As New SqlDataAdapter
+            Dim command As SqlCommand = New SqlCommand(sqlquery, conn)
+
+            command.Connection = conn
+            adapter.SelectCommand = command
+            data = command.ExecuteReader()
+
+            While data.Read
+                If data.HasRows = True Then
+                    Console.Write(data(0).ToString)
+                    Me.ShowMessage("Tu Folio es", "FOLIO: FP-" + data(0).ToString())
+                Else
+                    MsgBox("Error")
+                End If
+            End While
+
+
+            conn.Close()
+        Catch ex As Exception
+            Console.Write(ex)
+        End Try
+    End Sub
+
+    Private Sub InsertComplain()
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
             conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
@@ -38,39 +79,6 @@ Public Class FormComplain
             Me.GetLastID()
             Me.ClearTextBoxes()
 
-        Catch ex As Exception
-            Console.Write(ex)
-        End Try
-    End Sub
-
-    Private Sub GetLastID()
-        Dim conn As New SqlConnection
-        If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
-        End If
-
-        Try
-            conn.Open()
-            Dim sqlquery As String = "SELECT MAX(id_den) AS LastId FROM denuncia"
-            Dim data As SqlDataReader
-            Dim adapter As New SqlDataAdapter
-            Dim command As SqlCommand = New SqlCommand(sqlquery, conn)
-
-            command.Connection = conn
-            adapter.SelectCommand = command
-            data = command.ExecuteReader()
-
-            While data.Read
-                If data.HasRows = True Then
-                    Console.Write(data(0).ToString)
-                    Me.ShowMessage("Tu Folio es", "FOLIO: FP-" + data(0).ToString())
-                Else
-                    MsgBox("Error")
-                End If
-            End While
-
-
-            conn.Close()
         Catch ex As Exception
             Console.Write(ex)
         End Try
