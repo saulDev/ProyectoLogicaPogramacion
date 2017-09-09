@@ -14,12 +14,11 @@ Public Class FormComplain
 
         Try
             conn.Open()
-            Dim sqlquery As String = "INSERT INTO denuncia (den_num, den_nom, den_fecha, den_lugar, den_motivo, den_telefono, den_apprela, den_direccion) VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7, @param8)"
+            Dim sqlquery As String = "INSERT INTO denuncia (den_nom, den_fecha, den_lugar, den_motivo, den_telefono, den_apprela, den_direccion) VALUES (@param2, @param3, @param4, @param5, @param6, @param7, @param8)"
             Dim adapter As New SqlDataAdapter
             Dim parameter As New SqlParameter
             Dim command As SqlCommand = New SqlCommand(sqlquery, conn)
             With command.Parameters
-                .Add(New SqlParameter("@param1", "Hello"))
                 .Add(New SqlParameter("@param2", "Hello"))
                 .Add(New SqlParameter("@param3", "2017-01-01"))
                 .Add(New SqlParameter("@param4", "Hello"))

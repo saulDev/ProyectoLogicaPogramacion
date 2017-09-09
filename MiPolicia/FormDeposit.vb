@@ -9,7 +9,7 @@ Public Class FormDeposit
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=lenovo-pc\sqlexpress;Database=mipolicia;User Id=lenovo-pc\user;Password=Passw0rd01;Integrated Security=True")
+            conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
         End If
 
         Try
