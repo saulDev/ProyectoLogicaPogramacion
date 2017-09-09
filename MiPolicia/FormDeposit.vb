@@ -14,7 +14,7 @@ Public Class FormDeposit
 
         Try
             conn.Open()
-            Dim sqlquery As String = "SELECT * FROM corralones Where corr_ubica = @user;"
+            Dim sqlquery As String = "SELECT * FROM corralones Where corr_placa = @placa;"
 
             Dim data As SqlDataReader
             Dim adapter As New SqlDataAdapter
@@ -28,13 +28,9 @@ Public Class FormDeposit
             data = command.ExecuteReader()
             While data.Read
                 If data.HasRows = True Then
-                    If data(2).ToString = "Hello" Then
-                        MsgBox("Sucsess")
-                    Else
-                        MsgBox(data(2).ToString)
-                    End If
+                    MsgBox(data(2).ToString)
                 Else
-                    MsgBox("Login Failed! Please try again or contact support")
+                    MsgBox("Error")
                 End If
             End While
             conn.Close()
