@@ -17,7 +17,7 @@ Public Class FormComplain
     Private Sub GetLastID()
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
+            conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
         End If
 
         Try
@@ -50,7 +50,7 @@ Public Class FormComplain
     Private Sub InsertComplain()
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
+            conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
         End If
 
         Try

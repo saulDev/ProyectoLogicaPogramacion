@@ -31,9 +31,11 @@ Partial Class FormDeposit
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataGridViewLista = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewLista, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox2
@@ -113,11 +115,23 @@ Partial Class FormDeposit
         Me.Button2.Text = "Buscar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'DataGridViewLista
+        '
+        Me.DataGridViewLista.AllowUserToAddRows = False
+        Me.DataGridViewLista.AllowUserToDeleteRows = False
+        Me.DataGridViewLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewLista.Location = New System.Drawing.Point(37, 532)
+        Me.DataGridViewLista.Name = "DataGridViewLista"
+        Me.DataGridViewLista.ReadOnly = True
+        Me.DataGridViewLista.Size = New System.Drawing.Size(358, 105)
+        Me.DataGridViewLista.TabIndex = 13
+        '
         'FormDeposit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 848)
+        Me.ClientSize = New System.Drawing.Size(432, 782)
+        Me.Controls.Add(Me.DataGridViewLista)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
@@ -132,6 +146,7 @@ Partial Class FormDeposit
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewLista, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,4 +160,6 @@ Partial Class FormDeposit
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents lista As ListView
+    Friend WithEvents DataGridViewLista As DataGridView
 End Class

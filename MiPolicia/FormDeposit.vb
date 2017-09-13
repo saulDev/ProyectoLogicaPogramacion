@@ -7,32 +7,42 @@ Public Class FormDeposit
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Dim conn As New SqlConnection(My.Settings.basededatos)
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=DESKTOP-TO0SORL;Database=mipolicia;Integrated Security=True")
+            conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
         End If
+
 
         Try
             conn.Open()
-            Dim sqlquery As String = "SELECT * FROM corralones Where corr_placa = @placa;"
+            Dim sqlquery As String = "SELECT corr_marca MARCA,corr_modelo MODELO,corr_ubica UBICACION,corr_fecha FECHA_ARRASTRE FROM corralones Where corr_placa = @buscar;"
 
-            Dim data As SqlDataReader
             Dim adapter As New SqlDataAdapter
             Dim parameter As New SqlParameter
             Dim command As SqlCommand = New SqlCommand(sqlquery, conn)
+            Dim ds As New DataSet
+
+            Dim buscar As String
+
+            buscar = TextBox1.Text
+
+
             With command.Parameters
-                .Add(New SqlParameter("@user", "Hello"))
+                .Add(New SqlParameter("@buscar", buscar))
             End With
             command.Connection = conn
             adapter.SelectCommand = command
-            data = command.ExecuteReader()
-            While data.Read
-                If data.HasRows = True Then
-                    MsgBox(data(2).ToString)
-                Else
-                    MsgBox("Error")
-                End If
-            End While
+
+
+
+
+
+            adapter.Fill(ds, "corralones")
+            DataGridViewLista.DataSource = ds.Tables("corralones")
+            DataGridViewLista.Show()
+
+
             conn.Close()
         Catch ex As Exception
             Console.Write(ex)
