@@ -9,13 +9,14 @@ Public Class FormSearch
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
+            conn.ConnectionString = ("Server=Lenovo-pc\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
+            'conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
         End If
 
 
         Try
             conn.Open()
-            Dim sqlquery As String = "SELECT * FROM cuadrantes Where colonia = @colonia;"
+            Dim sqlquery As String = "SELECT cua_num COLONIA, cua_x LAT, cua_y LONG, cua_jefe JEFE  FROM cuadrantes Where cua_num = @colonia;"
 
             Dim adapter As New SqlDataAdapter
             Dim parameter As New SqlParameter

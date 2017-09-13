@@ -32,6 +32,7 @@ Partial Class FormDeposit
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridViewLista = New System.Windows.Forms.DataGridView()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +93,7 @@ Partial Class FormDeposit
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(101, 443)
+        Me.TextBox1.Location = New System.Drawing.Point(101, 428)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(207, 20)
         Me.TextBox1.TabIndex = 10
@@ -100,7 +101,7 @@ Partial Class FormDeposit
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(101, 424)
+        Me.Label2.Location = New System.Drawing.Point(101, 405)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(80, 13)
         Me.Label2.TabIndex = 11
@@ -108,7 +109,7 @@ Partial Class FormDeposit
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(101, 484)
+        Me.Button2.Location = New System.Drawing.Point(101, 463)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(207, 23)
         Me.Button2.TabIndex = 12
@@ -121,16 +122,26 @@ Partial Class FormDeposit
         Me.DataGridViewLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewLista.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
         Me.DataGridViewLista.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DataGridViewLista.Location = New System.Drawing.Point(37, 532)
+        Me.DataGridViewLista.Location = New System.Drawing.Point(37, 492)
         Me.DataGridViewLista.Name = "DataGridViewLista"
         Me.DataGridViewLista.Size = New System.Drawing.Size(358, 105)
         Me.DataGridViewLista.TabIndex = 13
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(148, 603)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(122, 40)
+        Me.Button3.TabIndex = 14
+        Me.Button3.Text = "Pago realizado"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'FormDeposit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 782)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.DataGridViewLista)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label2)
@@ -162,4 +173,5 @@ Partial Class FormDeposit
     Friend WithEvents Button2 As Button
     Friend WithEvents lista As ListView
     Friend WithEvents DataGridViewLista As DataGridView
+    Friend WithEvents Button3 As Button
 End Class

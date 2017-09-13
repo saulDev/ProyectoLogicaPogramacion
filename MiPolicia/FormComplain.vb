@@ -17,7 +17,8 @@ Public Class FormComplain
     Private Sub GetLastID()
         Dim conn As New SqlConnection
         If conn.State = ConnectionState.Closed Then
-            conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
+            conn.ConnectionString = ("Server=Lenovo-pc\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
+            'conn.ConnectionString = ("Server=I-SHOOL-LAP\SQLEXPRESS;Database=mipolicia;Integrated Security=True")
         End If
 
         Try

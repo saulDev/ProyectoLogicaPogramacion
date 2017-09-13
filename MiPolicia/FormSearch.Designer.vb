@@ -76,7 +76,7 @@ Partial Class FormSearch
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label1.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Snow
-        Me.Label1.Location = New System.Drawing.Point(104, 371)
+        Me.Label1.Location = New System.Drawing.Point(104, 359)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(217, 18)
         Me.Label1.TabIndex = 8
@@ -93,7 +93,7 @@ Partial Class FormSearch
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(153, 489)
+        Me.Button2.Location = New System.Drawing.Point(153, 439)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(115, 33)
         Me.Button2.TabIndex = 10
@@ -102,7 +102,7 @@ Partial Class FormSearch
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(107, 452)
+        Me.TextBox1.Location = New System.Drawing.Point(107, 416)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(214, 20)
         Me.TextBox1.TabIndex = 11
@@ -111,7 +111,7 @@ Partial Class FormSearch
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(110, 419)
+        Me.Label2.Location = New System.Drawing.Point(110, 387)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(62, 20)
         Me.Label2.TabIndex = 12
@@ -121,9 +121,9 @@ Partial Class FormSearch
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
-        Me.DataGridView1.Location = New System.Drawing.Point(37, 542)
+        Me.DataGridView1.Location = New System.Drawing.Point(37, 474)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(358, 119)
+        Me.DataGridView1.Size = New System.Drawing.Size(358, 78)
         Me.DataGridView1.TabIndex = 13
         '
         'FormSearch
