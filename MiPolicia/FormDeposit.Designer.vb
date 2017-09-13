@@ -118,11 +118,11 @@ Partial Class FormDeposit
         'DataGridViewLista
         '
         Me.DataGridViewLista.AllowUserToAddRows = False
-        Me.DataGridViewLista.AllowUserToDeleteRows = False
         Me.DataGridViewLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewLista.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
+        Me.DataGridViewLista.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.DataGridViewLista.Location = New System.Drawing.Point(37, 532)
         Me.DataGridViewLista.Name = "DataGridViewLista"
-        Me.DataGridViewLista.ReadOnly = True
         Me.DataGridViewLista.Size = New System.Drawing.Size(358, 105)
         Me.DataGridViewLista.TabIndex = 13
         '
