@@ -32,6 +32,9 @@ Partial Class FormSearch
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -126,11 +129,39 @@ Partial Class FormSearch
         Me.DataGridView1.Size = New System.Drawing.Size(358, 78)
         Me.DataGridView1.TabIndex = 13
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(168, 591)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 14
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(276, 589)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 15
+        Me.Button3.Text = "Actualizar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(61, 594)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(101, 13)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Nuevo comandante"
+        '
         'FormSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 848)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
@@ -161,4 +192,7 @@ Partial Class FormSearch
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label3 As Label
 End Class
